@@ -1,3 +1,5 @@
 /secrets/
 .venv/
 .idea/
+*.xml
+*.iml
