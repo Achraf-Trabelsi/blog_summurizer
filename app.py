@@ -18,10 +18,13 @@ def main():
     if st.button('Summarize'):
         if url and validate_url(url):
             try:
-                scrapped_content = get_scrapped_content(url=url)
+                with st.spinner(f"Scraping for {url} in Progress..."):
+                    scrapped_content = get_scrapped_content(url=url)
+
                 if scrapped_content and "text" in scrapped_content:
-                    summary = get_summary_generation(scrapped_content["text"],
-                                                     scrapped_content.get("title", "No Title Provided"))
+                    with st.spinner(f"Generation in Progress..."):
+                        summary = get_summary_generation(scrapped_content["text"],
+                                                         scrapped_content.get("title", "No Title Provided"))
 
                     st.write('Summary:')
                     st.write(summary)
