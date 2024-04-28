@@ -7,7 +7,7 @@ import logging
 from bs4 import BeautifulSoup
 import requests
 
-from utils import StringyIO
+from src.utils import StringyIO
 
 # Configure logging
 logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')

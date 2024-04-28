@@ -3,8 +3,8 @@
 import streamlit as st
 from validators import url as validate_url
 
-from generators import get_summary_generation
-from scrapper import get_scrapped_content
+from src.generators import get_summary_generation
+from src.scrapper import get_scrapped_content
 
 
 def main():

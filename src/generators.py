@@ -3,7 +3,7 @@
 import time
 import logging
 import anthropic
-from config import (
+from src.config import (
     SUMMARIZATION_PROMPT,
     DEFAULT_TEXT_TYPE,
     DEFAULT_RESPONSE_FORMAT,
