@@ -56,7 +56,7 @@ class Generator:
             response = self.client.messages.create(
                 messages=build_message(prompt), **self.params
             )
-            return response['content'][0]['text']
+            return response.content[0].text
         except Exception as e:
             logging.error(f"An error occurred while generating text: {e}")
             return "Failed to generate text due to an error."
