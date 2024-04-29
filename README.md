@@ -52,7 +52,7 @@ Watch the demo video below for a walkthrough of the BlogSummarizer: [Watch the D
   - `utils.py`: Utility functions.
   - `app.py`: Streamlit UI implementation.
 - `secrets/`: Contains api keys in a .txt.
-
+- `tests/`: Contains test scripts.
 ### Resources
 
 Here are some resources to deepen your understanding of content summarization and improve your use of the BlogSummarizer:
