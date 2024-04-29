@@ -79,6 +79,7 @@ def get_summary_generation(text: str, title: str):
 
 
 def main():
+    """run example for debuging"""
     # Example text to be summarized
     example_text = ("This is an example blog post text that discusses the importance of AI in modern healthcare, "
                     "exploring several key benefits such as improved diagnostic accuracy and personalized treatment "

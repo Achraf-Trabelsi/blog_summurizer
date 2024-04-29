@@ -45,15 +45,17 @@ class HTMLSource:
             self._text = text.strip()
             self._title = title
         except Exception as e:
-            logging.error(f"Error parsing HTML content for {url}: {e}")
+            logging.error(f"Error parsing HTML content: {e}")
             raise e
 
     @property
     def text(self):
+        """returns the text attribute"""
         return self._text
 
     @property
     def title(self):
+        """returns the title attribute"""
         return self._title
 
 
@@ -68,6 +70,7 @@ def get_scrapped_content(url: str) -> dict:
 
 
 def main():
+    """run example for debuging"""
     # Example URL to be scrapped
     example_url = "https://www.jobleads.com/career-advice/8-fabulous-freelance-websites-to-kick-start-your-solo-career"
     scrapped_content = get_scrapped_content(url=example_url)

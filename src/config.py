@@ -1,4 +1,5 @@
 """File to put configuration variable like keys and api params"""
+import sys
 
 DEFAULT_PARAMS_ANTHROPIC = {
     "temperature": 1.0,
@@ -41,4 +42,4 @@ try:
         ANTHROPIC_API_KEY = file.read().strip()
 except Exception as e:
     print(f"Could not read Anthropic key from disk: {e}")
-    exit(1)
+    sys.exit(1)
