@@ -1,0 +1,5 @@
+pytest==8.2.0
+pylint
+flake8
+black
+isort
