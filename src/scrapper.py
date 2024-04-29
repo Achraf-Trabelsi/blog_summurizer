@@ -1,16 +1,18 @@
 """Scrapes and process text from a URL"""
 
+import logging
 import re
 from os.path import basename
-import logging
 
-from bs4 import BeautifulSoup
 import requests
+from bs4 import BeautifulSoup
 
 from src.utils import StringyIO
 
 # Configure logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+)
 
 
 def url_download(url: str, timeout: int = 10) -> StringyIO:

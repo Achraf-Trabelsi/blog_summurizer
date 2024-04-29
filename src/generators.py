@@ -1,26 +1,26 @@
 """Module to generate text"""
 
-import time
 import logging
+import time
+
 import anthropic
-from src.config import (
-    SUMMARIZATION_PROMPT,
-    DEFAULT_TEXT_TYPE,
-    DEFAULT_RESPONSE_FORMAT,
-    ANTHROPIC_API_KEY,
-    DEFAULT_PARAMS_ANTHROPIC,
-)
+
+from src.config import (ANTHROPIC_API_KEY, DEFAULT_PARAMS_ANTHROPIC,
+                        DEFAULT_RESPONSE_FORMAT, DEFAULT_TEXT_TYPE,
+                        SUMMARIZATION_PROMPT)
 
 # Configure logging
-logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+logging.basicConfig(
+    level=logging.INFO, format="%(asctime)s - %(levelname)s - %(message)s"
+)
 
 
 def build_summarization_prompt(
-        text: str,
-        title: str,
-        prompt_template: str = SUMMARIZATION_PROMPT,
-        text_type: str = DEFAULT_TEXT_TYPE,
-        response_format: str = DEFAULT_RESPONSE_FORMAT,
+    text: str,
+    title: str,
+    prompt_template: str = SUMMARIZATION_PROMPT,
+    text_type: str = DEFAULT_TEXT_TYPE,
+    response_format: str = DEFAULT_RESPONSE_FORMAT,
 ) -> str:
     """
     Formats a prompt string for the given text, text_type, and response_format.
@@ -41,9 +41,9 @@ class Generator:
     """Builds a text generation object on top of client (LLM provider)"""
 
     def __init__(
-            self,
-            params: dict = DEFAULT_PARAMS_ANTHROPIC,
-            client=anthropic.Anthropic(api_key=ANTHROPIC_API_KEY),
+        self,
+        params: dict = DEFAULT_PARAMS_ANTHROPIC,
+        client=anthropic.Anthropic(api_key=ANTHROPIC_API_KEY),
     ):
         self.client = client
         self.params = params
@@ -81,9 +81,11 @@ def get_summary_generation(text: str, title: str):
 def main():
     """run example for debuging"""
     # Example text to be summarized
-    example_text = ("This is an example blog post text that discusses the importance of AI in modern healthcare, "
-                    "exploring several key benefits such as improved diagnostic accuracy and personalized treatment "
-                    "options.")
+    example_text = (
+        "This is an example blog post text that discusses the importance of AI in modern healthcare, "
+        "exploring several key benefits such as improved diagnostic accuracy and personalized treatment "
+        "options."
+    )
     example_title = "AI in healthcare"
     summary = get_summary_generation(example_text, example_title)
     logging.info(f"Summary: {summary}")

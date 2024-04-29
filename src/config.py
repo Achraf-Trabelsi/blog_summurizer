@@ -1,4 +1,5 @@
 """File to put configuration variable like keys and api params"""
+
 import sys
 
 DEFAULT_PARAMS_ANTHROPIC = {
@@ -9,7 +10,6 @@ DEFAULT_PARAMS_ANTHROPIC = {
 
 SUMMARIZATION_PROMPT = (
     """
-
 As a Proficient Summarizer, create a concise and comprehensive summary of the provided {text_type}, 
 while adhering to these guidelines:
 
@@ -18,7 +18,6 @@ while adhering to these guidelines:
  *A summary is written in your own words. 
  *A summary contains only the ideas of the original text. 
  *Do not insert any of your own opinions, interpretations, deductions or comments into a summary.
-
 """
     """"
 
