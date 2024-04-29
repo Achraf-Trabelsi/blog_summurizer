@@ -8,6 +8,7 @@ from src.scrapper import get_scrapped_content
 
 
 def main():
+    """Main function to build UI"""
     st.title('Blog Summarizer')
     st.subheader('Enter the URL of a blog post to summarize:')
 
@@ -22,7 +23,7 @@ def main():
                     scrapped_content = get_scrapped_content(url=url)
 
                 if scrapped_content and "text" in scrapped_content:
-                    with st.spinner(f"Generation in Progress..."):
+                    with st.spinner("Generation in Progress..."):
                         summary = get_summary_generation(scrapped_content["text"],
                                                          scrapped_content.get("title", "No Title Provided"))
 
