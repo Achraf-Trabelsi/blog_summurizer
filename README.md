@@ -30,14 +30,16 @@ BlogSummarizer is a streamlit app that scrapes content from a specified blog pos
 
 ### Usage
 
-1. Launch the Streamlit UI:
+1. create `secrets/anthropic_api_key.txt` with your api key in it.
+
+2. Launch the Streamlit UI:
    ```bash
    streamlit run src/app.py
    ```
 
-2. Open the application in your web browser at `http://localhost:8501`.
+3. Open the application in your web browser at `http://localhost:8501`.
 
-3. Enter a blog post URL into the input field and click "Summarize" to see the generated summary.
+4. Enter a blog post URL into the input field and click "Summarize" to see the generated summary.
 
 ### Demo Video
 
