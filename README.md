@@ -18,7 +18,7 @@ BlogSummarizer is a streamlit app that scrapes content from a specified blog pos
 
 2. Create and activate a virtual environment:
    ```bash
-   python -m venv .venv
+   python3 -m venv .venv
    source .venv/bin/activate   # For Unix
    .venv\Scripts\activate      # For Windows
    ```
@@ -34,7 +34,7 @@ BlogSummarizer is a streamlit app that scrapes content from a specified blog pos
 
 2. Launch the Streamlit UI:
    ```bash
-   streamlit run src/app.py
+   streamlit run app.py
    ```
 
 3. Open the application in your web browser at `http://localhost:8501`.
@@ -52,7 +52,7 @@ Watch the demo video below for a walkthrough of the BlogSummarizer: [Watch the D
   - `generators.py`: Functions to generate summaries from text content.
   - `scrapper.py`: Functions to scrape content from a given URL.
   - `utils.py`: Utility functions.
-  - `app.py`: Streamlit UI implementation.
+- `app.py`: Streamlit UI implementation.
 - `secrets/`: Contains api keys in a .txt.
 - `tests/`: Contains test scripts.
 ### Resources
